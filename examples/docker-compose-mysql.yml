@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+    db:
+        image: mariadb:latest
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=example
+            - MYSQL_DATABASE=bolt
+            - MYSQL_USER=bolt
+            - MYSQL_PASSWORD=boltpass123
+
+    bolt:
+        image: chibicitiberiu/bolt-cms
+        environment:
+            - DB_HOST=db
+            - DB_NAME=bolt
+            - DB_PORT=3306
+            - DB_USERNAME=bolt
+            - DB_PASSWORD=boltpass123
+        volumes:
+            - config_dir:/var/www/html/app/config
+            - database_dir:/var/www/html/app/database
+            - files_dir:/var/www/html/public/files
+            - extensions_dir:/var/www/html/extensions
+        depends-on:
+            - db

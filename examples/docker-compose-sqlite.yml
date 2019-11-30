@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+    bolt:
+        image: chibicitiberiu/bolt-cms
+        volumes:
+            - config_dir:/var/www/html/app/config
+            - database_dir:/var/www/html/app/database
+            - files_dir:/var/www/html/public/files
+            - extensions_dir:/var/www/html/extensions

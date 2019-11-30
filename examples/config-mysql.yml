@@ -1,0 +1,8 @@
+# Using %ABCD% syntax, you can use environment variables instead
+database:
+    driver: mysql
+    host: %DB_HOST%
+    port: %DB_PORT%
+    username: %DB_USERNAME%
+    password: %DB_PASSWORD%
+    databasename: %DB_NAME%
