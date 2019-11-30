@@ -6,7 +6,8 @@ This repository contains (unofficial) Docker images, served with Apache and PHP.
 
 ## Supported tags
 
-* `3.6`, `latest`
+* `latest`,
+* `3.6`, 
 * `3.5`,
 * `3.4`,
 * `3.3`
