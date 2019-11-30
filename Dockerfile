@@ -46,7 +46,7 @@ VOLUME ./app/cache \
     ./public/files \
     ./extensions
 
-ARG BOLT_URL=https://bolt.cm/distribution/archive/3.6/bolt-v3.6.11.tar.gz
+ARG BOLT_URL=https://bolt.cm/distribution/archive/3.7/bolt-v3.7.0.tar.gz
 
 RUN curl -sS $BOLT_URL | tar -xvz --strip-components=1
 RUN mv .bolt.yml.dist .bolt.yml && \
