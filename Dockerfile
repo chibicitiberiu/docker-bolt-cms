@@ -39,7 +39,12 @@ RUN a2enmod rewrite
 RUN mkdir -p /var/www/html/
 WORKDIR /var/www/html/
 
-VOLUME .
+VOLUME ./app/cache \
+    ./app/config \
+    ./app/database \
+    ./public/extensions \
+    ./public/files \
+    ./extensions
 
 ARG BOLT_URL=https://bolt.cm/distribution/bolt-latest.tar.gz
 
