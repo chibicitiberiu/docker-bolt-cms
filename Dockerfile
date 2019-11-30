@@ -41,7 +41,7 @@ WORKDIR /var/www/html/
 
 VOLUME .
 
-ARG BOLT_URL=https://bolt.cm/distribution/archive/3.4/bolt-v3.4.11.tar.gz
+ARG BOLT_URL=https://bolt.cm/distribution/archive/3.5/bolt-3.5.7.tar.gz
 
 RUN curl -sS $BOLT_URL | tar -xvz --strip-components=1
 RUN mv .bolt.yml.dist .bolt.yml && \
