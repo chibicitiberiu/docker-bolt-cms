@@ -7,4 +7,5 @@ git pull
 sed -i "s#ARG BOLT_URL=.*#ARG BOLT_URL=$2" Dockerfile
 git add Dockerfile
 git commit -m "Version $1"
+git tag -d "$1"
 git tag "$1"
